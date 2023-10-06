@@ -1,7 +1,7 @@
 ![workflow](https://github.com/jonathanpmartins/v-money3/actions/workflows/main.yml/badge.svg)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 
-# Money Mask for Vue 3
+# Money Mask for Vue 3 [Without BIGINT]
 
 ### [View Demo](https://jonathanpmartins.github.io/v-money3/example/index.html)
 
