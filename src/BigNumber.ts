@@ -2,10 +2,10 @@ import {
   guessFloatPrecision, isValidFloat, isValidInteger, removeLeadingZeros, round,
 } from './Utils';
 
-type NumberParam = bigint | number | string;
+type NumberParam = number | string;
 
 export default class BigNumber {
-  protected number = 0n;
+  protected number = 0;
 
   protected decimal = 0;
 
@@ -13,7 +13,7 @@ export default class BigNumber {
     this.setNumber(number);
   }
 
-  getNumber(): bigint {
+  getNumber(): number {
     return this.number;
   }
 
@@ -91,10 +91,10 @@ export default class BigNumber {
     number = removeLeadingZeros(number);
 
     if (isValidInteger(number)) {
-      this.number = BigInt(number);
+      this.number = Number(number);
     } else if (isValidFloat(number)) {
       this.decimal = guessFloatPrecision(number);
-      this.number = BigInt(number.replace('.', ''));
+      this.number = Number(number.replace('.', ''));
     } else {
       throw new Error(`BigNumber has received and invalid format for the constructor: ${number}`);
     }
